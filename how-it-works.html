@@ -1,0 +1,117 @@
+<!--How Browsers Work page for the Web Development project-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Head section with metadata and stylesheet link-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Browsers Work</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!--Body section with page content -->
+<body>
+
+    <!--Header section with page title-->
+    <header>
+        <h1>How Browsers Work</h1>
+    </header>
+    
+    <!--Navigation menu linking to all pages of the website-->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="history.html">History</a>
+      <a href="how-it-works.html">How Browsers Work</a>
+      <a href="key-concepts.html">Key Concepts</a>
+      <a href="about.html">About</a>
+      <a href="references.html">References</a>
+    </nav>
+
+    <!--Main content area-->
+    <main>
+
+        <!--Section: Requesting a web page-->
+        <h2>Requesting a Web Page</h2>
+    
+        <p>
+            When a user types a web address into the address bar, the browser first performs a DNS lookup to convert the domain name into an IP address. 
+            After finding the IP address, the browser sends a request to the server for the files needed to display the webpage.
+        </p>
+
+        <!--Section: Data Transfer and Packets-->
+        <h2>Data Transfer and Packets</h2>
+
+        <p>
+            When a webpage is requested, the data does not arrive as one large file. Instead, it is sent in many small pieces called packets. The browser 
+            tracks these packets and reassembles them when they arrive to ensure the webpage is displayed correctly.
+        </p>
+
+        <!--Section: Protocols-->
+        <h2>Protocols</h2>
+
+        <p>
+            Protocols such as TCP/IP and HTTP allow communication between the browser and the server. HTTP defines how requests and responses are formatted, 
+            while TCP/IP ensures that the data packets are delivered to the correct destination. When a browser requests a webpage, the server responds with 
+            a status code, such as "200 OK," which means the request was successful.
+        </p>
+
+        <!--Section: Building the webpage-->
+        <h2>Building the Web Page</h2>
+    
+        <p>
+            Once the data is received, the browser begins to process the files. HTML provides the structure of the webpage, including headings, paragraphs, 
+            images, and links. CSS is used to control the appearance of the page, such as colors, fonts, and spacing. JavaScript adds interactivity, 
+            allowing the page to respond to user actions like clicking buttons or filling out forms.
+        </p>
+
+        <!--Section: Rendering the webpage-->
+        <h2>Rendering the Web Page</h2>
+    
+        <p>
+            The browser uses a rendering engine to combine all of the files and display the final webpage on the screen. Modern browsers also use advanced architecture, 
+            such as separating tabs into different processes, to improve performance and prevent crashes.
+        </p>
+    
+        <!--Section: Key Technologies Used in Browsers-->
+        <h2>Key Technologies Used in Browsers</h2>
+
+        <!--Table showing key technologies and their purposes-->
+        <table>
+            <tr>
+                <th>Technology</th>
+                <th>Purpose</th>
+            </tr>
+        
+            <tr>
+                <td>HTML</td>
+                <td>Provides the structure of a webpage</td>
+            </tr>
+        
+            <tr>
+                <td>CSS</td>
+                <td>Controls the appearance and layout</td>
+            </tr>
+        
+            <tr>
+                <td>JavaScript</td>
+                <td>Adds interactivity and dynamic behavior</td>
+            </tr>
+        
+            <tr>
+                <td>HTTP</td>
+                <td>Transfers data between browser and server</td>
+            </tr>
+        </table>
+    </main>
+
+    <!--Footer section with course information and course website link-->
+    <footer>
+        <p>
+            This website is a class project for IT 3203.
+            <a href="https://ksuweb.github.io/IT3203/" class="text-link">Course website</a>
+        </p>
+    </footer>
+</body>
+
+</html>
