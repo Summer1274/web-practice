@@ -1,4 +1,6 @@
-/*PAGE STYLE*/
+/*PAGE STYLE:
+Sets the overall page height and uses a flex layout so the footer stays at the bottom.
+Also applies the main font, background color, and default text color for the website.*/
 html,body {
     height: 100%;
 }
@@ -13,12 +15,16 @@ body {
     color: #333333;
 }
 
+/*PARAGRAPHS
+Adds spacing and line height to improve readability of text content.*/
 p {
     line-height: 1.6;
     margin: 15px;
 }
 
-/*HEADERS*/
+/*HEADERS
+Styles the main page headings with consistent colors, font sizes, padding, and borders
+to create a uniform appearance across all pages.*/
 h1 {
     background-color: #2f7f73;
     color: white;
@@ -29,6 +35,8 @@ h1 {
     padding: 20px;
 }
 
+/*Styles subtopic headings with consistent appearance as main page header. These headings
+are smaller to create visual hierarchy an organization of page layout.*/
 h2 {
     background-color: #2f7f73;
     color: white;
@@ -37,7 +45,9 @@ h2 {
     padding: 10px;
 }
 
-/*NAVIGATION*/
+/*NAVIGATION
+Uses flexbox to center the navigation links and create a consistent horizontal menu
+that appears the same on every page.*/
 nav {
     background-color: #e6f2ef;
     padding: 10px;
@@ -46,6 +56,7 @@ nav {
     border: 2px solid #1e5f55;
 }
 
+/*Styles navigation links and adds hover effects to improve user interaction.*/
 a {
     color: #1e5f55;
     padding: 10px;
@@ -60,17 +71,22 @@ a:hover {
     color: white;
 }
 
-/*MAIN CONTENT*/
+/*MAIN CONTENT
+Allows the main content area to expand so the layout fills the page correctly.*/
 main {
     flex: 1;
     padding: 20px;
 }
 
+/*ID SELECTOR
+Adds slight letter spacing to the main homepage title for emphasis.*/
 #main-title {
     letter-spacing: 1px;
 }
 
-/*TEXT LINKS*/
+/*TEXT LINKS
+Creates a separate style for footer and reference links so they remain clearly visible
+and distinct from the navigation links.*/
 .text-link{
     color: blue;
     text-decoration: underline;
@@ -81,18 +97,18 @@ main {
     background-color: transparent;
 }
 
-/*IMAGES*/
+/*IMAGES
+Styles images to be centered, properly sized, and visually consistent*/
 img {
-    max-width: 500px;
     width: 100%;
-    height: auto;
+    max-width: 400px;
+    margin: 10px auto;
     display: block;
-    margin: 20px auto;
-    border: 2px solid #1e5f55;
-    border-radius: 5px;
+    border: 1px solid #1e5f55;
 }
 
-/*TABLES*/
+/*TABLES
+Styles tables with borders and header formatting to organize information clearly.*/
 table {
     border: 2px solid #1e5f55;
     border-collapse: collapse;
@@ -109,12 +125,15 @@ th {
     font-weight: bold;
 }
 
-/*LISTS*/
+/*LISTS
+Adds spacing between list items to improve readability.*/
 li {
     margin-bottom: 10px;
 }
 
-/*FOOTER*/
+/*FOOTER
+Styles the footer so it is consistent with the rest of the website
+and it displays the course information at the bottom of each page.*/
 footer {
     background-color: #2f7f73;
     color:white;
