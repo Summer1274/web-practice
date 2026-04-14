@@ -66,9 +66,10 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+nav a:hover, nav a.active {
     background-color: #1e5f55;
     color: white;
+    border-radius: 5px;
 }
 
 /*MAIN CONTENT
