@@ -2,35 +2,156 @@
 <!DOCTYPE html>
 <html lang="en">
   
-<!--Head section defines the page title and connects the external CSS file. This allows the page to share the same
-styling and formatting as the rest of the website-->
+<!--Head section defines the page title and connects the external CSS file. This allows the page to share the same styling and formatting as the rest of the website-->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
   
 <!--Body section with page content -->
 <body>
 
-  <!--The header displays the main page title. Using a consistent header on each page helps create a uniform 
-  design across the site.-->
+  <!--The header displays the main page title. Using a consistent header on each page helps create a uniform design across the site.--> 
   <header>
-    <h1 id="main-title">Quiz</h1>
+    <h1 id="main-title">Web Browser Quiz</h1>
   </header>
 
-  <!--The navigation menu provides links to all pages of the website. This makes it easy for users to move 
-  between sections and keeps navigation consistent.-->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="history.html">History</a>
-    <a href="how-it-works.html">How Browsers Work</a>
-    <a href="key-concepts.html">Key Concepts</a>
-    <a href="quiz.html" class="active">Quiz</a>
-    <a href="about.html">About</a>
-    <a href="references.html">References</a>
-  </nav>
+    <!--The navigation menu provides links to all pages of the website making it easier to move between sections and keeps navigation consistent across all pages.-->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="history.html">History</a>
+      <a href="how-it-works.html">How Browsers Work</a>
+      <a href="key-concepts.html">Key Concepts</a>
+      <a href="quiz.html" class="active">Quiz</a>
+      <a href="about.html">About</a>
+      <a href="references.html">References</a>
+    </nav>
 
-  <!--The main section contains the primary content for this page.-->
+  <!--The main section contains the primary content for this page, including the list of sources used for the website.-->
   <main>
+
+    <div class="container">
+
+      <div class="quiz-container">
+
+        <h2>Quiz Instructions</h2>
+
+        <ul>
+          <li>You must answer every question before submitting.</li>
+          <li>You need at least 4 out of 5 correct to pass.</li>
+        </ul>
+
+        <h3>Test Your Knowledge</h3>
+
+        <form id="quiz-form" onsubmit="checkQuiz(event)">
+ 
+
+          <!--Question 1-->
+          <div class="question">
+            <p><strong>1. Who created the first web browser?</strong></p>
+            <label>
+              <input type="radio" name="q1" value="Correct">Tim Berners-Lee
+            </label><br>
+            <label>
+              <input type="radio" name="q1" value="Wrong">Marc Andreessen
+            </label><br>
+            <label>
+              <input type="radio" name="q1" value="Wrong">Steve Jobs
+            </label><br>
+            <label>
+              <input type="radio" name="q1" value="Wrong">Bill Gates
+            </label>
+          </div>
+
+
+          <!--Question 2-->
+          <div class="question">
+            <p><strong>2. What does HTML stand for?</strong></p>
+            <label for="q2">Your answer:</label>
+            <input type="text" id="q2" name="q2"> 
+          </div>
+
+
+          <!--Question 3-->
+          <div class="question">
+            <p><strong>3. What is the primary purpose of DNS?</strong></p>
+            <label>
+              <input type="radio" name="q3" value="Wrong">To store images
+            </label><br>
+            <label>
+              <input type="radio" name="q3" value="Wrong">To create websites
+            </label><br>
+            <label>
+              <input type="radio" name="q3" value="Correct">To convert domain names into IP addresses
+            </label><br>
+            <label>
+              <input type="radio" name="q3" value="Wrong">To style web pages
+            </label>
+          </div>
+
+
+          <!--Question 4-->
+          <div class="question">
+            <p><strong>4. What is JavaScript used for?</strong></p>
+            <label>
+              <input type="radio" name="q4" value="Wrong">Styling
+            </label><br>
+            <label>
+              <input type="radio" name="q4" value="Correct">Interactivity
+            </label><br>
+            <label>
+              <input type="radio" name="q4" value="Wrong">Security
+            </label><br>
+            <label>
+              <input type="radio" name="q4" value="Wrong">Database
+            </label>
+          </div>
+
+
+          <!--Question 5-->
+          <div class="question">
+            <p><strong>5. Which of the following are used to build and display web pages? (Select all that apply)</strong></p>
+            <label>
+              <input type="checkbox" name="q5" value="HTML">HTML
+            </label><br>
+            <label>
+              <input type="checkbox" name="q5" value="CSS">CSS
+            </label><br>
+            <label>
+              <input type="checkbox" name="q5" value="JavaScript">JavaScript
+            </label><br>
+            <label>
+              <input type="checkbox" name="q5" value="CPU">CPU
+            </label>  
+          </div>
+
+
+          <!--Creates a button to submit answers for grading-->
+          <button type="submit">Submit Quiz</button>
+
+          <!--Creates a button to clear the answers and any scores to start the quiz from scratch-->
+          <button type="button" onclick="resetQuiz()">Reset Quiz</button>
+
+        </form>
+
+        <div id="results"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <!--Footer section with course information and course website link-->
+  <footer>
+    <p>
+      This website is a class project for IT 3203.
+      <a href="https://ksuweb.github.io/IT3203/" class="text-link">Course website</a>
+    </p>
+  </footer>
+
+</body>
+</html>
+
+  

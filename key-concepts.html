@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--Head section defines the page title and connects the external CSS file. This allows the page to share the same
-styling and formatting as the rest of the website-->
+<!--Head section defines the page title and connects the external CSS file. This allows the page to share the same styling and formatting as the rest of the website-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +13,12 @@ styling and formatting as the rest of the website-->
 <!--Body section with page content -->
 <body>
 
-    <!--The header displays the main page title. Using a consistent header on each page helps create a uniform 
-    design across the site.-->
+    <!--The header displays the main page title. Using a consistent header on each page helps create a uniform design across the site.--> 
     <header>
         <h1>Key Concepts</h1>
     </header>
     
-    <!--The navigation menu provides links to all pages of the website. This makes it easy for users to move 
-    between sections and keeps navigation consistent.-->
+    <!--The navigation menu provides links to all pages of the website making it easier to move between sections and keeps navigation consistent across all pages.-->
     <nav>
       <a href="index.html">Home</a>
       <a href="history.html">History</a>
@@ -32,59 +29,87 @@ styling and formatting as the rest of the website-->
       <a href="references.html">References</a>
     </nav>
 
-    <!--The main section contains the primary content for this page. Information is divided into sections 
-    with headings so it is easier to read and follow.-->
+    <!--The main section contains the primary content for this page, including the list of sources used for the website.-->
     <main>
 
-        <!--Section: Web Browsers-->
-        <h2>Web Browsers</h2>
-        <p>
-            A web browser is software that allows users to access and view websites on the internet. It takes data from web servers and displays 
-            it in a readable format. 
-        </p>
+        <div class="container">
 
-        <!--Section: HTML (HyperText Markup Language)-->
-        <h2>HTML (HyperText Markup Language)</h2>
-        
-        <p>
-            HTML is the standard language used to create the structure of web pages. It defines elements such as headings, paragraphs, images, and links.
-        </p>
-    
-        <!--Section: CSS (Cascading Style Sheets)-->
-        <h2>CSS (Cascading Style Sheets)</h2>
-    
-        <p>
-            CSS is used to control the appearance of web pages. It allows developers to change colors, fonts, spacing, and layout. 
-        </p>
 
-        <!--Section: JavaScript-->
-        <h2>JavaScript</h2>
-        
-        <p>
-            JavaScript is a programming language that adds interactivity to web pages. It allows users to interact with elements like buttons, forms, and 
-            dynamic content. 
-        </p>
+            <!--Section: Web Browsers-->
+            <section>
+                <h2>Web Browsers</h2>
+                <p>
+                    A web browser is software that allows users to access and view websites on the internet. 
+                    It takes data from web servers and displays it in a readable format. 
+                    For example, when a user opens Chrome or Safari and types in a website address, 
+                    the browser retrieves the information and displays it as a readable webpage.
+                </p>
+            </section>
 
-        <!--Section: DNS (Domain Name System)-->
-        <h2>DNS (Domain Name System)</h2>
-    
-        <p>
-            DNS is a system that translates domain names, like google.com, into IP addresses so that browsers can locate web servers.
-        </p>
-    
-        <!--Section: HTTP (Hypertext Transfer Protocol)-->
-        <h2>HTTP (Hypertext Transfer Protocol)</h2>
-    
-        <p>
-            HTTP is the protocol used to transfer data between a web browser and a server. It defines how requests and responses are sent over the internet.
-        </p>
 
-        <!--Section: Rendering Engine-->
-        <h2>Rendering Engine</h2>
-    
-        <p>
-            A rendering engine is a component of a browser that processes HTML, CSS, and JavaScript to display the final web page on the screen. 
-        </p>
+            <!--Section: HTML (HyperText Markup Language)-->
+            <section>
+                <h2>HTML (HyperText Markup Language)</h2>
+                <p>
+                    HTML is the standard language used to create the structure of web pages. It defines elements such as headings, paragraphs, images, and links.
+                    For example, HTML is used to create elements like headings, paragraphs, and images that make up the structure of a webpage.
+                </p>
+            </section>
+            
+
+            <!--Section: CSS (Cascading Style Sheets)-->
+            <section>
+                <h2>CSS (Cascading Style Sheets)</h2>
+                <p>
+                    CSS is used to control the appearance of web pages. It allows developers to change colors, fonts, spacing, and layout. 
+                    For example, CSS can change the color of text, adjust spacing, and create layouts that make a webpage visually appealing and easier to read.
+                </p>
+            </section>
+
+
+            <!--Section: JavaScript-->
+            <section>
+                <h2>JavaScript</h2>
+                <p>
+                    JavaScript is a programming language that adds interactivity to web pages. 
+                    It allows users to interact with elements like buttons, forms, and dynamic content. 
+                    For example, when a user clicks a button or submits a form, JavaScript allows the page to respond instantly without needing to reload.
+                </p>
+            </section>
+
+
+            <!--Section: DNS (Domain Name System)-->
+            <section>
+                <h2>DNS (Domain Name System)</h2>
+                <p>
+                    DNS is a system that translates domain names, like google.com, into IP addresses so that browsers can locate web servers.
+                    For example, when a user types in a website like google.com, DNS translates that name into an IP address so the browser can locate the correct server.
+                </p>
+            </section>
+            
+
+            <!--Section: HTTP (Hypertext Transfer Protocol)-->
+            <section>
+                <h2>HTTP (Hypertext Transfer Protocol)</h2>
+                <p>
+                    HTTP is the protocol used to transfer data between a web browser and a server. It defines how requests and responses are sent over the internet.
+                    For example, when a user visits a website, the browser sends an HTTP request to the server and receives a response that loads the webpage.
+                </p>
+            </section>
+
+
+            <!--Section: Rendering Engine-->
+            <section>
+                <h2>Rendering Engine</h2>
+                <p>
+                    A rendering engine is a component of a browser that processes HTML, CSS, and JavaScript to display the final web page on the screen. 
+                    For example, the rendering engine takes the HTML, CSS, and JavaScript files and combines them to display the final webpage on the screen.
+                </p>
+            </section>
+
+
+        </div>
+
     </main>
     
     <!--Footer section with course information and course website link-->
@@ -94,6 +119,7 @@ styling and formatting as the rest of the website-->
             <a href="https://ksuweb.github.io/IT3203/" class="text-link">Course website</a>
         </p>
     </footer>
+
 </body>
 
 </html>

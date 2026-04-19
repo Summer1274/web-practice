@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--Head section defines the page title and connects the external CSS file. This allows the page to share the same
-styling and formatting as the rest of the website-->
+<!--Head section defines the page title and connects the external CSS file. This allows the page to share the same styling and formatting as the rest of the website-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +13,12 @@ styling and formatting as the rest of the website-->
 <!--Body section with page content -->
 <body>
 
-    <!--The header displays the main page title. Using a consistent header on each page helps create a uniform design
-    across all pages of the website.-->
+    <!--The header displays the main page title. Using a consistent header on each page helps create a uniform design across the site.--> 
     <header>
         <h1>History of Web Browsers</h1>
     </header>
 
-    <!--The navigation menu provides links to all pages of the website. This makes it easier for users to move
-    between sections and keeps navigation consistent across all pages.-->
+    <!--The navigation menu provides links to all pages of the website making it easier to move between sections and keeps navigation consistent across all pages.-->
     <nav>
       <a href="index.html">Home</a>
       <a href="history.html" class="active">History</a>
@@ -32,73 +29,87 @@ styling and formatting as the rest of the website-->
       <a href="references.html">References</a>
     </nav>
 
-    <!--The main section contains the primary content for this page. Information is divided into sections with headings
-    so it is easier to read.-->
+    <!--The main section contains the primary content for this page, including the list of sources used for the website.-->
     <main>
 
-        <!--Section: Early Web Browsers-->
-        <h2>Early Web Browsers</h2>
+        <div class="container">
+            
 
-        <p>
-            Tim Berners-Lee created the first web browser, known as WorldWideWeb, in 1990. This browser was
-            text-based and designed to share information; furthermore, it did not support images, videos, or interactive features.
-            Even though it was very simple, it was important because it made it possible to share information. 
-        </p>
-
-        <!--Images are included to support the content and make it easier to understand.-->
-        <img src="images/WorldWideWeb_Browser.jpg" alt="Screenshot of WorldWideWeb browser">
+            <!--Section: Early Web Browsers-->
+            <section>
+                <h2>Early Web Browsers</h2>
+                <p>
+                    Tim Berners-Lee created the first web browser, known as WorldWideWeb, in 1990. This browser was text-based and designed to share information. 
+                    It did not support images, videos, or interactive features. Even though it was very simple, it was important because it made it possible to 
+                    share information through the web. This early browser was important because it introduced the idea of accessing and sharing information through the web.
+                    Even though it was limited, it laid the foundation for the modern internet.
+                </p>
+                <!--Images are included to support the content and make it easier to understand.-->
+                <img src="images/WorldWideWeb_Browser.jpg" alt="Screenshot of WorldWideWeb browser">
+            </section>
     
-        <!--Section: NCSA Mosaic-->
-        <h2>NCSA Mosaic</h2>
-    
-        <p>
-            A few years later, in 1993, NCSA Mosaic was released and became the first user-friendly web browser that was widely used. It 
-            introduced support for images placed directly inside web pages, which made websites more appealing. This change attracted more 
-            users and increased interest in improving the internet experience.
-        </p>
 
-        <img src="images/NCSA_Mosaic_Browser.jpg" alt="Screenshot of NCSA Mosaic browser">
-        
-        <!--Section: Netscape Navigator-->
-        <h2>Netscape Navigator</h2>
+            <!--Section: NCSA Mosaic-->
+            <section>
+                <h2>NCSA Mosaic</h2>
+                <p>
+                    A few years later, in 1993, NCSA Mosaic was released and became the first user-friendly web browser that was widely used. 
+                    It introduced support for images placed directly inside web pages, which made websites more appealing. 
+                    This change attracted more users and increased interest in improving the internet experience.
+                    This was a major turning point because it made the internet more visually appealing and easier for everyday users
+                    to navigate, which helped increase the number of people using the web.
+                </p>
+                <img src="images/NCSA_Mosaic_Browser.jpg" alt="Screenshot of NCSA Mosaic browser">
+            </section>
 
-        <p>
-            One of the most important browsers that followed Mosaic was Netscape Navigator, which was released in 1994. Netscape became popular 
-            because it was faster and easier to use than earlier browsers. It also supported images, hyperlinks, and early scripting features. 
-            These scripting features allowed websites to respond to user actions, which made them feel more interactive instead of just showing 
-            static text.  Businesses and organizations even started creating websites as well. 
-        </p>
 
-        <img src="images/Netscape_Navigator_Browser.png" alt="Screenshot of Netscape Navigator browser">
+             <!--Section: Netscape Navigator-->
+            <section>
+                <h2>Netscape Navigator</h2>
+                <p>
+                    One of the most important browsers that followed Mosaic was Netscape Navigator, which was released in 1994. Netscape became popular because 
+                    it was faster and easier to use than earlier browsers. It also supported images, hyperlinks, and early scripting features. These scripting 
+                    features allowed websites to respond to user actions, which made them feel more interactive instead of just showing static text.
+                    Netscape’s success showed that there was strong demand for faster and more interactive web experiences, which encouraged more companies to 
+                    invest in browser development.
+                </p>
+                <img src="images/Netscape_Navigator_Browser.png" alt="Screenshot of Netscape Navigator browser">
+            </section>
 
-        <!--Section: The Browser Wars-->
-        <h2>The Browser Wars</h2>
-        
-        <p>
-            As Netscape grew in popularity, other companies wanted to compete in the browser market. This period became known as the “browser wars”. 
-            In 1995, Microsoft released Internet Explorer, and during this time, browsers started adding new features, including bookmarks, better 
-            navigation tools, and improved support for multimedia content. Although this competition increased innovation, it also created issues. 
-            Different browsers supported different features and interpreted website code in different ways, which resulted in some websites working 
-            well in one browser but not the other. 
-        </p>
 
-        <img src="images/Browser_War_Image.webp" alt="Image showing the browser wars between Internet Explorer and Netscape Navigator">
+            <!--Section: The Browser Wars-->
+            <section>
+                <h2>The Browser Wars</h2>
+                <p>
+                    As Netscape grew in popularity, other companies wanted to compete in the browser market. This period became known as the “browser wars”. 
+                    In 1995, Microsoft released Internet Explorer, and during this time, browsers started adding new features, including bookmarks, better 
+                    navigation tools, and improved support for multimedia content. Although this competition increased innovation, it also created issues. 
+                    Different browsers supported different features and interpreted website code in different ways, which resulted in some websites working 
+                    well in one browser but not the other. Although this competition led to rapid innovation, it also caused compatibility problems. 
+                    Websites often worked differently across browsers, which made development more challenging and highlighted the need for standardization.
+                </p>
+                <img src="images/Browser_War_Image.webp" alt="Image showing the browser wars between Internet Explorer and Netscape Navigator">
+            </section>
 
-        <!--Section: Modern Web Browsers-->
-        <h2>Modern Web Browsers</h2>
-    
-        <p>
-            By the early 2000s, Internet Explorer began to dominate the browser market, causing updates to slow and security problems to increase. 
-            To address this, organizations like the World Wide Web Consortium (W3C) developed standards for HTML, CSS, and JavaScript. These standards 
-            helped ensure that websites would function more consistently across different browsers.
-        </p>
-        
-        <p>
-            Later, Mozilla Firefox and Google Chrome helped improve browser performance, security, and stability. Chrome introduced a new architecture 
-            that separated tabs into different processes, which helped prevent the entire browser from crashing.
-        </p>
 
-        <img src="images/Later_Modern_Browser.png" alt="Screenshot of later modern browsers">
+            <!--Section: Modern Web Browsers-->
+            <section>
+                <h2>Modern Web Browsers</h2>
+                <p>
+                    By the early 2000s, Internet Explorer began to dominate the browser market, causing updates to slow and security problems to increase. 
+                    To address this, organizations like the World Wide Web Consortium (W3C) developed standards for HTML, CSS, and JavaScript. 
+                    These standards helped ensure that websites would function more consistently across different browsers.
+                    Later, Mozilla Firefox and Google Chrome helped improve browser performance, security, and stability. Chrome introduced a new architecture 
+                    that separated tabs into different processes, which helped prevent the entire browser from crashing.
+                    Modern browsers began focusing more on performance, security, and consistency. Features such as tab separation
+                    and improved standards helped create a more stable and reliable browsing experience.
+                </p>
+                <img src="images/Later_Modern_Browser.png" alt="Screenshot of later modern browsers">
+            </section>
+
+
+        </div>
+
     </main>
 
     <!--Footer section with course information and course website link-->
@@ -108,6 +119,7 @@ styling and formatting as the rest of the website-->
             <a href="https://ksuweb.github.io/IT3203/" class="text-link">Course website</a>
         </p>
     </footer>
+
 </body>
 
 </html>

@@ -1,6 +1,5 @@
 /*PAGE STYLE:
-Sets the overall page height and uses a flex layout so the footer stays at the bottom.
-Also applies the main font, background color, and default text color for the website.*/
+Sets the overall page height and uses a flex layout so the footer stays at the bottom. Applies the main font, background color, and default text color for the website.*/
 html,body {
     height: 100%;
 }
@@ -19,12 +18,11 @@ body {
 Adds spacing and line height to improve readability of text content.*/
 p {
     line-height: 1.6;
-    margin: 15px;
+    margin: 15px 0;
 }
 
 /*HEADERS
-Styles the main page headings with consistent colors, font sizes, padding, and borders
-to create a uniform appearance across all pages.*/
+Styles the main page headings with consistent colors, font sizes, padding, and borders to create a uniform appearance across all pages.*/
 h1 {
     background-color: #2f7f73;
     color: white;
@@ -33,16 +31,26 @@ h1 {
     font-family: Arial, sans-serif;
     border-bottom: 2px solid #1e5f55;
     padding: 20px;
+    margin: 0;
 }
 
-/*Styles subtopic headings with consistent appearance as main page header. These headings
-are smaller to create visual hierarchy an organization of page layout.*/
+/*Styles subtopic headings with a consistent appearance. These headings are smaller to create visual hierarchy and improve organization.*/
 h2 {
     background-color: #2f7f73;
     color: white;
     font-size: 28px;
     font-family: Arial, sans-serif;
     padding: 10px;
+    margin-top: 0;
+}
+
+/* Styles smaller subsection headings, such as the quiz title, to create visual hierarchy without competing with the main page headings. */
+h3 {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #1e5f55;
+    font-weight: bold;
 }
 
 /*NAVIGATION
@@ -54,10 +62,11 @@ nav {
     display: flex;
     justify-content: center;
     border: 2px solid #1e5f55;
+    flex-wrap: wrap;
 }
 
 /*Styles navigation links and adds hover effects to improve user interaction.*/
-a {
+nav a {
     color: #1e5f55;
     padding: 10px;
     margin: 0 5px;
@@ -72,11 +81,31 @@ nav a:hover, nav a.active {
     border-radius: 5px;
 }
 
+
 /*MAIN CONTENT
 Allows the main content area to expand so the layout fills the page correctly.*/
 main {
     flex: 1;
     padding: 20px;
+}
+
+main a{
+    color:#1e5f55;
+    font-weight: bold;
+}
+
+main a:hover{
+    color: #2f7f73
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom:30px;
 }
 
 /*ID SELECTOR
@@ -102,10 +131,28 @@ and distinct from the navigation links.*/
 Styles images to be centered, properly sized, and visually consistent*/
 img {
     width: 100%;
-    max-width: 400px;
-    margin: 10px auto;
+    max-width: 500px;
+    height: auto;
+    margin: 10px auto 8px;
     display: block;
     border: 1px solid #1e5f55;
+    border-radius: 6px;
+}
+
+.image-caption {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 900px;
+    display: block;
+    margin: 20px auto 8px;
+    border-radius: 8px;
 }
 
 /*TABLES
@@ -114,10 +161,12 @@ table {
     border: 2px solid #1e5f55;
     border-collapse: collapse;
     width: 100%;
+    margin-top: 10px;
+    background-color: white;
 }
 th, td {
     border: 1.5px solid #1e5f55;
-    padding: 5px;
+    padding: 10px;
     text-align: left;
 }
 th {
@@ -141,4 +190,76 @@ footer {
     text-align: center;
     padding: 15px;
     border-top: 2px solid #1e5f55;
+    font-size: 14px;
+}
+
+/*QUIZ
+Styles the quiz page*/
+.quiz-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    max-width: 800px;
+}
+
+.quiz-container input[type="text"]{
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    margin-top: 8px;
+    border: 1px solid #1e5f55;
+    border-radius:4px;
+}
+
+.quiz-container label{
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.quiz-container button{
+    margin-top:10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius:5px;
+    background-color: #1b7f6b;
+    color: white;
+    cursor: pointer;
+}
+
+.quiz-container button:hover{
+    background-color: #145c4d;
+}
+
+.quiz-container ul {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.question{
+    margin-bottom:20px;
+}
+
+/* RESULT FEEDBACK
+Styles the results area and uses color to clearly show general quiz feedback, including pass/fail status and validation messages. */
+#results{
+    margin-top:20px;
+    padding:15px;
+    border-radius:8px;
+    background-color: #f0f0f0;
+}
+
+.pass{
+    color: #155724;
+    background-color: #d4edda;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.fail{
+    color: #721c24;
+    background-color: #f8d7da;
+    padding: 8px;
+    border-radius: 5px;
 }

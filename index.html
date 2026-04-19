@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
   
-<!--Head section defines the page title and connects the external CSS file. This allows the page to share the same
-styling and formatting as the rest of the website-->
+<!--Head section defines the page title and connects the external CSS file. 
+This allows the page to share the same styling and formatting as the rest of the website-->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +14,12 @@ styling and formatting as the rest of the website-->
 <!--Body section with page content -->
 <body>
 
-  <!--The header displays the main page title. Using a consistent header on each page helps create a uniform 
-  design across the site.-->
+  <!--The header displays the main page title. Using a consistent header on each page helps create a uniform design across the site.--> 
   <header>
     <h1 id="main-title">Welcome to The Evolution of Web Browsers</h1>
   </header>
 
-  <!--The navigation menu provides links to all pages of the website. This makes it easy for users to move 
-  between sections and keeps navigation consistent.-->
+  <!--The navigation menu provides links to all pages of the website making it easier to move between sections and keeps navigation consistent across all pages.-->
   <nav>
     <a href="index.html" class="active">Home</a>
     <a href="history.html">History</a>
@@ -32,48 +30,75 @@ styling and formatting as the rest of the website-->
     <a href="references.html">References</a>
   </nav>
 
-  <!--The main section contains the primary content for this page. Information is divided into sections 
-  with headings so it is easier to read and follow.-->
+  <div class="hero-image">
+    <img src="images/browser_overview.PNG" alt="Illustration of web browsers and internet connectivity">
+    
+   <p class="image-caption">
+      Examples of different web browsers used today.
+    </p>
+  </div>
+
+  <!--The main section contains the primary content for this page, including the list of sources used for the website.-->
   <main>
 
-    <!--Section: Introduction - This section provides an overview of web browsers and introduces the 
-    purpose of the website.-->
-    <h2>Introduction</h2>
-    
-    <p>
-      A web browser is software that turns data into an easy-to-read format for people using the World Wide Web. People use web 
-      browsers every day for tasks like shopping online, watching videos, checking emails, and viewing their social media. 
-    </p>
-
-    <p>
-      Modern browsers are fast, visually appealing, and capable of running complex web applications. However, early browsers were simple and limited
-      compared to what people use today.
-    </p>
-
-    <!--Section: Key Terms - This section defines important terms related to web browsers to help 
-    users understand the content of the site.-->
-    <h2>Key Terms</h2>
-
-    <ul>
-      <li><strong>Web Browser:</strong> Software that retrieves and displays web pages.</li>
-      <li><strong>HTML:</strong> HyperText Markup Language, the standard language for creating web pages.</li>
-      <li><strong>CSS:</strong> Cascading Style Sheets, used to describe the presentation of a document written in HTML.</li>
-      <li><strong>JavaScript:</strong> A programming language that enables interactive web pages.</li>
-      <li><strong>DNS:</strong> Domain Name System, which translates domain names into IP addresses.</li>
-      <li><strong>HTTP:</strong> HyperText Transfer Protocol, used to transfer data between a browser and a server.</li>
-    </ul>
-    
-    <!--Section: Site Contents - This section provides links to the main pages of the website, 
-    acting as a table of contents for easy navigation.-->
-    <h2>Site Contents</h2>
+    <div class="container">
       
-    <ul>
-      <li><a href="history.html">History of Web Browsers</a></li>
-      <li><a href="how-it-works.html">How Browsers Work</a></li>
-      <li><a href="key-concepts.html">Key Concepts</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="references.html">References</a></li>
-    </ul>
+
+      <!--Section: Introduction - This section provides an overview of web browsers and introduces the purpose of the website.-->
+      <section>
+        <h2>Introduction</h2>
+        <p>
+          A web browser is software that turns data into an easy-to-read format for people using the World Wide Web. 
+          People use web browsers every day for tasks like shopping online, watching videos, checking emails, and viewing their social media. 
+          Modern browsers are fast, visually appealing, and capable of running complex web applications. However, early browsers were simple and limited
+          compared to what people use today.
+        </p>
+      </section>  
+
+
+      <!--Section: This section describes the importance of Web Browsers-->
+      <section>
+        <h2>Why Web Browsers Matter</h2>
+        <p>
+          Web browsers play a critical role in making the internet accessible to everyday users. Before web browsers existed, 
+          users had to rely on command-line interfaces, which required technical knowledge and made the internet difficult to use. 
+          Browsers simplified this process by turning complex data into organized and interactive web pages.
+          Today, browsers allow users to perform tasks such as shopping online, streaming media, communicating, and using 
+          cloud-based applications. This transformation has made the internet an essential part of daily life.
+        </p>
+      </section>
+
+
+      <!--Section: Key Terms - This section defines important terms related to web browsers to help users understand the content of the site.-->
+      <section>
+        <h2>Key Terms</h2>
+        <ul>
+          <li><strong>Web Browser:</strong> Software that retrieves and displays web pages.</li>
+          <li><strong>HTML:</strong> HyperText Markup Language, the standard language for creating web pages.</li>
+          <li><strong>CSS:</strong> Cascading Style Sheets, used to describe the presentation of a document written in HTML.</li>
+          <li><strong>JavaScript:</strong> A programming language that enables interactive web pages.</li>
+          <li><strong>DNS:</strong> Domain Name System, which translates domain names into IP addresses.</li>
+          <li><strong>HTTP:</strong> HyperText Transfer Protocol, used to transfer data between a browser and a server.</li>
+        </ul>
+      </section>
+
+
+      <!--Section: Site Contents - This section provides links to the main pages of the website, acting as a table of contents for easy navigation.-->
+      <section>
+        <h2>Site Contents</h2> 
+        <ul>
+          <li><a href="history.html">History of Web Browsers</a></li>
+          <li><a href="how-it-works.html">How Browsers Work</a></li>
+          <li><a href="key-concepts.html">Key Concepts</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </section>
+      
+
+    </div>
+
   </main>
 
   <!--Footer section with course information and course website link-->
@@ -83,6 +108,7 @@ styling and formatting as the rest of the website-->
         <a href="https://ksuweb.github.io/IT3203/" class="text-link">Course website</a>
     </p>
   </footer>
+
 </body>
 
 </html>
