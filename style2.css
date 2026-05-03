@@ -144,7 +144,7 @@ main a:hover {
 }
 
 .text-link {
-    color: var(--soft-teal);
+    color: var(--text-dark);
     text-decoration: underline;
 }
 
