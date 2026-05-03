@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How Browsers Work</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
 
 <!--Body section with page content -->
@@ -36,23 +36,37 @@
 
 
             <!--Section: Requesting a web page-->
-            <section>
+            <section class="content-card">
                 <h2>Requesting a Web Page</h2>
-                <p>
-                    When a user types a web address into the address bar, the browser first performs a DNS lookup to convert the domain name into an IP address. 
-                    After finding the IP address, the browser sends a request to the server for the files needed to display the webpage.
-                    This process happens very quickly behind the scenes, allowing users to visit websites without needing to know the technical details involved. 
-                    Without DNS, users would have to remember and type long numerical IP addresses instead of simple website names.
-                </p>
-                <img src="images/browser-request-simple.webp" alt="Simple diagram showing how a browser requests a webpage">
-                <p class="image-caption">
-                    Simple overview of how a browser sends a request and receives a response from a server.
-                </p>
+                <div class="split-layout">
+                    <div class="text-content">
+                        <p>
+                            When a user types a web address into the address bar, the browser first performs a DNS lookup to convert the domain name into an IP address. 
+                            After finding the IP address, the browser sends a request to the server for the files needed to display the webpage.
+                            This process happens very quickly behind the scenes, allowing users to visit websites without needing to know the technical details involved.
+                        </p>    
+                        <p>
+                            Without DNS, users would have to remember and type long numerical IP addresses instead of simple website names.
+                            This system makes the internet much easier for everyday users to navigate.
+                        </p>
+                        <p>
+                            After finding the IP address, the browser sends an HTTP request to the server. 
+                            This request includes information such as the type of data being requested and details about the browser itself.
+                            The server then responds with the requested files, along with a status code indicating whether the request was successful.
+                        </p>
+                    </div>
+                    <div class="image-content">
+                        <img src="images/browser-request-simple.webp" alt="Simple diagram showing how a browser requests a webpage">
+                        <p class="image-caption">
+                            Simple overview of how a browser sends a request and receives a response from a server.
+                        </p>
+                    </div>
+                </div>
             </section>
 
 
             <!--Section: Data Transfer and Packets-->
-            <section>
+            <section class="content-card">
                 <h2>Data Transfer and Packets</h2>
                 <p>
                     When a webpage is requested, the data does not arrive as one large file. Instead, it is sent in many small pieces called packets. 
@@ -60,11 +74,18 @@
                     Sending data in packets makes internet communication more reliable and efficient. If one packet is delayed or lost, 
                     it can be resent without restarting the entire transfer, which helps the browser load webpages more accurately.
                 </p>
+                <p>
+                    Each packet contains a small portion of the data along with information about its destination and order, 
+                    allowing the browser to correctly reassemble the full webpage once all packets arrive.
+                </p>
+                <p class="key-note">
+                    Key idea: Breaking data into small packets makes the internet faster, more reliable, and able to recover from errors.
+                </p>
             </section>
 
 
             <!--Section: Protocols-->
-            <section>
+            <section class="content-card">
                 <h2>Protocols</h2>
                 <p>
                     Protocols such as TCP/IP and HTTP allow communication between the browser and the server. HTTP defines how requests and responses are formatted, 
@@ -73,11 +94,14 @@
                     These protocols are important because they create a standard way for browsers and servers to communicate.
                     Without them, devices would not be able to exchange information in a consistent and dependable way.
                 </p>
+                <p class="key-note">
+                    Key idea: Protocols create rules that allow browsers and servers to communicate in a consistent and reliable way.
+                </p>
             </section>
 
 
             <!--Section: Building the webpage-->
-            <section>   
+            <section class="content-card">   
                 <h2>Building the Web Page</h2>
                 <p>
                     Once the data is received, the browser begins to process the files. HTML provides the structure of the webpage, including headings, paragraphs, 
@@ -87,11 +111,14 @@
                     the appearance, and JavaScript adds behavior, which allows modern websites to feel much more interactive than
                     older static pages.
                 </p>
+                <p class="key-note">
+                    Key idea: HTML, CSS, and JavaScript each play a different role in building and displaying a modern web page.
+                </p>
             </section>
 
 
             <!--Section: Rendering the webpage-->
-            <section>
+            <section class="content-card">
                 <h2>Rendering the Web Page</h2>
                 <p>
                     The browser uses a rendering engine to combine all of the files and display the final webpage on the screen. Modern browsers also use advanced architecture, 
@@ -99,11 +126,18 @@
                     In the past, different browsers used different rendering engines, that sometimes caused websites to look or behave differently depending on the browser. 
                     This inconsistency made web development more difficult and increased the need for standard web technologies.
                 </p>
+                <p>
+                    The browser builds a structure called the Document Object Model (DOM), which represents the webpage 
+                    and allows it to be displayed and updated dynamically.
+                </p>
+                <p class="key-note">
+                    Key idea: The rendering engine combines all resources to display a webpage correctly and efficiently on the screen.
+                </p>
             </section>
 
 
             <!--Section: Key Technologies Used in Browsers-->
-            <section>
+            <section class="content-card">
                 <h2>Key Technologies Used in Browsers</h2>
 
                 <!--Table displaying key web technologies and their functions. A table is used to organize information clearly making content easier to read.-->

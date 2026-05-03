@@ -7,7 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Key Concepts</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <script src="script.js" defer></script>
 </head>
 
 <!--Body section with page content -->
@@ -33,80 +34,110 @@
     <main>
 
         <div class="container">
+            <p class="card-instruction">
+                Select a card to reveal the definition.
+            </p>
 
+            <!-- Flashcard Grid -->
+            <div class="card-grid">
 
-            <!--Section: Web Browsers-->
-            <section>
-                <h2>Web Browsers</h2>
-                <p>
-                    A web browser is software that allows users to access and view websites on the internet. 
-                    It takes data from web servers and displays it in a readable format. 
-                    For example, when a user opens Chrome or Safari and types in a website address, 
-                    the browser retrieves the information and displays it as a readable webpage.
-                </p>
-            </section>
+                <!-- Web Browsers -->
+                <div class="flip-card">
+                    <div class="flip-front">
+                        <h3>Web Browsers</h3>
+                    </div>
+                    <div class="flip-back hidden">
+                        <p>
+                            A web browser is software that allows users to access and view websites on the internet.
+                        </p>
+                    </div>
+                </div>
 
+                <!-- HTML -->
+                <div class="flip-card">
+                    <div class="flip-front">
+                        <h3>HTML</h3>
+                    </div>
+                    <div class="flip-back hidden">
+                        <p>
+                            HTML structures a webpage using elements like headings, text, images, and links.
+                        </p>
+                    </div>
+                </div>
 
-            <!--Section: HTML (HyperText Markup Language)-->
-            <section>
-                <h2>HTML (HyperText Markup Language)</h2>
-                <p>
-                    HTML is the standard language used to create the structure of web pages. It defines elements such as headings, paragraphs, images, and links.
-                    For example, HTML is used to create elements like headings, paragraphs, and images that make up the structure of a webpage.
-                </p>
-            </section>
-            
+                <!-- CSS -->
+                <div class="flip-card">
+                    <div class="flip-front">
+                        <h3>CSS</h3>
+                    </div>
+                    <div class="flip-back hidden">
+                        <p>
+                            CSS controls the look of a webpage, including colors, layout, and spacing.
+                        </p>
+                    </div>
+                </div>
 
-            <!--Section: CSS (Cascading Style Sheets)-->
-            <section>
-                <h2>CSS (Cascading Style Sheets)</h2>
-                <p>
-                    CSS is used to control the appearance of web pages. It allows developers to change colors, fonts, spacing, and layout. 
-                    For example, CSS can change the color of text, adjust spacing, and create layouts that make a webpage visually appealing and easier to read.
-                </p>
-            </section>
+                <!-- JavaScript -->
+                <div class="flip-card">
+                    <div class="flip-front">
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="flip-back hidden">
+                        <p>
+                            JavaScript adds interactivity, allowing users to interact with buttons, forms, and dynamic content.
+                        </p>
+                    </div>
+                </div>
 
+                <!-- DNS -->
+                <div class="flip-card">
+                    <div class="flip-front">
+                        <h3>DNS</h3>
+                    </div>
+                    <div class="flip-back hidden">
+                        <p>
+                            DNS translates website names into IP addresses so browsers can locate servers.
+                        </p>
+                    </div>
+                </div>
 
-            <!--Section: JavaScript-->
-            <section>
-                <h2>JavaScript</h2>
-                <p>
-                    JavaScript is a programming language that adds interactivity to web pages. 
-                    It allows users to interact with elements like buttons, forms, and dynamic content. 
-                    For example, when a user clicks a button or submits a form, JavaScript allows the page to respond instantly without needing to reload.
-                </p>
-            </section>
+                <!-- HTTP -->
+                <div class="flip-card">
+                    <div class="flip-front">
+                        <h3>HTTP</h3>
+                    </div>
+                    <div class="flip-back hidden">
+                        <p>
+                            HTTP is the protocol used for transferring data between a browser and a server.
+                        </p>
+                    </div>
+                </div>
 
+                <!-- HTTPS (extra term to balance grid) -->
+                <div class="flip-card">
+                    <div class="flip-front">
+                        <h3>HTTPS</h3>
+                    </div>
+                    <div class="flip-back hidden">
+                        <p>
+                            HTTPS is a secure version of HTTP that encrypts data to protect user information.
+                        </p>
+                    </div>
+                </div>
 
-            <!--Section: DNS (Domain Name System)-->
-            <section>
-                <h2>DNS (Domain Name System)</h2>
-                <p>
-                    DNS is a system that translates domain names, like google.com, into IP addresses so that browsers can locate web servers.
-                    For example, when a user types in a website like google.com, DNS translates that name into an IP address so the browser can locate the correct server.
-                </p>
-            </section>
-            
+                <!-- Rendering Engine -->
+                <div class="flip-card">
+                    <div class="flip-front">
+                        <h3>Rendering Engine</h3>
+                    </div>
+                    <div class="flip-back hidden">
+                        <p>
+                            A rendering engine processes HTML, CSS, and JavaScript to display a webpage on the screen.
+                        </p>
+                    </div>
+                </div>
 
-            <!--Section: HTTP (Hypertext Transfer Protocol)-->
-            <section>
-                <h2>HTTP (Hypertext Transfer Protocol)</h2>
-                <p>
-                    HTTP is the protocol used to transfer data between a web browser and a server. It defines how requests and responses are sent over the internet.
-                    For example, when a user visits a website, the browser sends an HTTP request to the server and receives a response that loads the webpage.
-                </p>
-            </section>
-
-
-            <!--Section: Rendering Engine-->
-            <section>
-                <h2>Rendering Engine</h2>
-                <p>
-                    A rendering engine is a component of a browser that processes HTML, CSS, and JavaScript to display the final web page on the screen. 
-                    For example, the rendering engine takes the HTML, CSS, and JavaScript files and combines them to display the final webpage on the screen.
-                </p>
-            </section>
-
+            </div>
 
         </div>
 

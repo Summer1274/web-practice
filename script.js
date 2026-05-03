@@ -1,3 +1,5 @@
+//======================= QUIZ FUNCTIONALITY =======================
+
 // This function handles quiz validation, scoring, and feedback display. It ensures all inputs are completed, evaluates answers, and provides results to user
 function checkQuiz(event) {
     
@@ -124,3 +126,89 @@ function checkQuiz(event) {
         // Re-enables the submit button for another attempt
         document.querySelector('button[type = "submit"]').disabled = false;
 }
+
+
+//======================= TIMELINE NAVIGATION =======================
+
+// Get all timeline buttons and add click event for navigation
+let timelineButtons = document.querySelectorAll(".timeline-button");
+
+timelineButtons.forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        // Remove active class from all buttons
+        timelineButtons.forEach(btn => btn.classList.remove("active"));
+
+        // Add active class to the selected button
+        this.classList.add("active");
+
+        // Scroll to the corresponding section
+        let targetId = this.getAttribute("data-target");
+        let targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+
+    });
+
+});
+
+
+//======================= TIMELINE SCROLL TRACKING =======================
+
+// Update active button based on scroll position
+let sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+
+    let scrollPosition = window.scrollY + 150;
+
+    sections.forEach(section => {
+
+        if (
+            scrollPosition >= section.offsetTop &&
+            scrollPosition < section.offsetTop + section.offsetHeight
+        ) {
+
+            let id = section.getAttribute("id");
+
+            timelineButtons.forEach(btn => {
+
+                btn.classList.remove("active");
+
+                if (btn.getAttribute("data-target") === id) {
+                    btn.classList.add("active");
+                }
+
+            });
+
+        }
+
+    });
+
+});
+
+
+//======================= FLIP CARD FUNCTIONALITY =======================
+
+// Toggle front and back content when a card is clicked
+let cards = document.querySelectorAll(".flip-card");
+
+cards.forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        let front = card.querySelector(".flip-front");
+        let back = card.querySelector(".flip-back");
+
+        front.classList.toggle("hidden");
+        back.classList.toggle("hidden");
+
+    });
+
+});
