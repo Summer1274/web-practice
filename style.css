@@ -769,7 +769,7 @@ a similar structure to the desktop version. The goal is to reduce crowding witho
         gap: 0px;
     }
 
-    /* Moves images above text for better reading flow on smaller screens */
+     /* Moves images above text for better reading flow on smaller screens */
     .split-layout .image-content {
         order: -1;
         margin-bottom: 10px;
@@ -779,7 +779,6 @@ a similar structure to the desktop version. The goal is to reduce crowding witho
     .split-layout.reverse .image-content {
         order: -1;
     }
-
     .split-layout.reverse .text-content {
         order: 2;
     }
@@ -867,7 +866,11 @@ and making all elements easier to interact with on smaller touch screens. */
     li {
         text-align: left;
         font-size: 16px;
-        line-height: 1.6;
+        line-height: 1.5;
+    }
+
+    a {
+        word-break: break-word;
     }
 
     /* Converts navigation to vertical stacked layout for easier tapping */
@@ -935,7 +938,7 @@ and making all elements easier to interact with on smaller touch screens. */
         max-width: 280px;
     }
 
-    /* Removes timeline decorative dot */
+     /* Removes timeline decorative dot */
     .timeline-button::before {
         display: none;
     }
@@ -964,7 +967,7 @@ and making all elements easier to interact with on smaller touch screens. */
         order: -1;
     }
 
-    /* Slightly increases image size */
+     /* Slightly increases image size */
     .about-image-box img {
         width: 160px;
     }
