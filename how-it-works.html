@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How Browsers Work</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <!--Body section with page content -->
@@ -29,16 +29,23 @@
       <a href="references.html">References</a>
     </nav>
 
-    <!--The main section contains the primary content for this page, including the list of sources used for the website.-->
+   <!--The main section contains the primary content for this page.-->
     <main>
 
+        <!--Using a container to group the content and apply consistent styling across the page.-->
         <div class="container">
 
 
             <!--Section: Requesting a web page-->
             <section class="content-card">
+
+                <!--Heading for the section-->
                 <h2>Requesting a Web Page</h2>
+
+                <!--Using a split layout to organize text and images side by side-->
                 <div class="split-layout">
+
+                    <!--Text content explaining the process of requesting a web page-->
                     <div class="text-content">
                         <p>
                             When a user types a web address into the address bar, the browser first performs a DNS lookup to convert the domain name into an IP address. 
@@ -50,23 +57,31 @@
                             This system makes the internet much easier for everyday users to navigate.
                         </p>
                         <p>
-                            The browser then sends an HTTP request to the server, which includes information about the type of data being requested and details about the browser itself. 
-                            The server responds with the requested files along with a status code indicating whether the request was successful.
+                            The browser then sends an HTTP request to the server, which includes information about the type of data being requested and details about the 
+                            browser itself. The server responds with the requested files along with a status code indicating whether the request was successful.
                         </p>
                     </div>
+
+                    <!-- Image showing the browser request process -->
                     <div class="image-content">
                         <img src="images/browser-request-simple.webp" alt="Simple diagram showing how a browser requests a webpage">
                         <p class="image-caption">
                             Simple overview of how a browser sends a request and receives a response from a server.
                         </p>
                     </div>
+
                 </div>
+
             </section>
 
 
             <!--Section: Data Transfer and Packets-->
             <section class="content-card">
+
+                <!--Heading for the section-->
                 <h2>Data Transfer and Packets</h2>
+
+                <!--Text content explaining how data is transferred in packets and the importance of this method-->
                 <p>
                     When a webpage is requested, the data does not arrive as one large file. Instead, it is sent in many small pieces called packets. 
                     The browser tracks these packets and reassembles them when they arrive to ensure the webpage is displayed correctly.
@@ -77,15 +92,22 @@
                     Each packet contains a small portion of the data along with information about its destination and order, 
                     allowing the browser to correctly reassemble the full webpage once all packets arrive.
                 </p>
+
+                <!--Key note about the importance of data packets-->
                 <p class="key-note">
                     Key idea: Breaking data into small packets makes the internet faster, more reliable, and able to recover from errors.
                 </p>
+
             </section>
 
 
             <!--Section: Protocols-->
             <section class="content-card">
+
+                <!--Heading for the section-->
                 <h2>Protocols</h2>
+
+                <!--Text content explaining the role of protocols in browser communication-->
                 <p>
                     Protocols such as TCP/IP and HTTP allow communication between the browser and the server. HTTP defines how requests and responses are formatted, 
                     while TCP/IP ensures that the data packets are delivered to the correct destination. When a browser requests a webpage, the server responds with 
@@ -93,15 +115,22 @@
                     These protocols are important because they create a standard way for browsers and servers to communicate.
                     Without them, devices would not be able to exchange information in a consistent and dependable way.
                 </p>
+
+                <!--Key note about the importance of protocols-->
                 <p class="key-note">
                     Key idea: Protocols create rules that allow browsers and servers to communicate in a consistent and reliable way.
                 </p>
+
             </section>
 
 
             <!--Section: Building the webpage-->
             <section class="content-card">   
+
+                <!--Heading for the section-->
                 <h2>Building the Web Page</h2>
+
+                <!--Text content explaining how the browser processes HTML, CSS, and JavaScript to build and display a webpage-->
                 <p>
                     Once the data is received, the browser begins to process the files. HTML provides the structure of the webpage, including headings, paragraphs, 
                     images, and links. CSS is used to control the appearance of the page, such as colors, fonts, and spacing. JavaScript adds interactivity, 
@@ -110,37 +139,48 @@
                     the appearance, and JavaScript adds behavior, which allows modern websites to feel much more interactive than
                     older static pages.
                 </p>
+
+                <!--Key note about the different roles of HTML, CSS, and JavaScript-->
                 <p class="key-note">
                     Key idea: HTML, CSS, and JavaScript each play a different role in building and displaying a modern web page.
                 </p>
+
             </section>
 
 
             <!--Section: Rendering the webpage-->
             <section class="content-card">
+
+                <!--Heading for the section-->
                 <h2>Rendering the Web Page</h2>
+
+                <!--Text content explaining the rendering process-->
                 <p>
                     The browser uses a rendering engine to combine all of the files and display the final webpage on the screen. 
                     It builds a structure called the Document Object Model (DOM), which represents the webpage and allows it to be displayed and updated dynamically.
                 </p>
-
                 <p>
                     Modern browsers also use advanced architecture, such as separating tabs into different processes, to improve performance and prevent crashes. 
                     This makes browsing more stable and reliable compared to earlier browsers.
                 </p>
-
                 <p>
                     In the past, different browsers used different rendering engines, which sometimes caused websites to look or behave differently depending on the browser. 
                     This inconsistency made web development more difficult and increased the need for standardized web technologies.
                 </p>
+
+                <!--Key note about the rendering process-->
                 <p class="key-note">
-                    Key idea: The rendering engine combines all resources and structures the page (DOM) to display it correctly, while modern browser architecture improves performance and stability.
+                    Key idea: The rendering engine combines all resources and structures the page (DOM) to display it correctly, while modern browser architecture 
+                    improves performance and stability.
                 </p>
+
             </section>
 
 
             <!--Section: Key Technologies Used in Browsers-->
             <section class="content-card">
+
+                <!--Heading for the section-->
                 <h2>Key Technologies Used in Browsers</h2>
 
                 <!--Table displaying key web technologies and their functions. A table is used to organize information clearly making content easier to read.-->
@@ -170,8 +210,8 @@
                         <td>Transfers data between browser and server</td>
                     </tr>
                 </table>
-            </section>
 
+            </section>
 
         </div>
 

@@ -1,3 +1,9 @@
+/* ============================================ ROOT VARIABLES ============================================= */
+
+/* Defines common colors, spacing, and styles that can be reused throughout the CSS. 
+This makes it easy to maintain a consistent design and allows for quick updates by 
+changing the variable values in one place. */
+
 :root {
     --main-teal: #2f7f73;
     --dark-teal: #1e5f55;
@@ -8,99 +14,107 @@
     --caption-gray: #555555;
     --button-bg: #1b7f6b;
     --button-hover: #145c4d;
-
     --card-radius: 12px;
     --small-radius: 6px;
-
     --soft-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     --medium-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
     --hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-   
     --spacing-sm: 10px;
     --spacing-md: 20px;
     --spacing-lg: 30px;
 }
 
 
-/*PAGE STYLE:
-Sets the overall page height and uses a flex layout so the footer stays at the bottom. Applies the main font, background color, and default text color for the website.*/
+/* ========================================== GLOBAL PAGE STYLE ============================================ */
 
-html,body {
+/*Sets the overall page height and uses a flex layout so the footer stays at the bottom. 
+Applies the main font, background color, and default text color for the website.*/
+
+html,
+body {
     height: 100%;
 }
 
 body {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--page-bg);
     color: var(--text-dark);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
 }
 
-/*PARAGRAPHS
-Adds spacing and line height to improve readability of text content.*/
+main {
+    flex: 1;
+    padding: var(--spacing-md);
+}
+
 p {
-    line-height: 1.6;
     margin: 15px 0;
+    line-height: 1.6;
 }
 
-/*HEADERS
-Styles the main page headings with consistent colors, font sizes, padding, and borders to create a uniform appearance across all pages.*/
+li {
+    margin-bottom: var(--spacing-sm);
+}
+
+
+/* =============================================== HEADINGS ================================================ */
+
+/* Styles for different heading levels to create a clear visual hierarchy. 
+Each heading level has specific margins, padding, background colors, borders, 
+and font sizes to make them stand out to draw the user's attention. */
 h1 {
+    margin: 0;
+    padding: 20px;
     background-color: var(--main-teal);
+    border-bottom: 2px solid var(--dark-teal);
     color: white;
     text-align: center;
     font-size: 36px;
-    font-family: Arial, sans-serif;
-    border-bottom: 2px solid var(--dark-teal);
-    padding: 20px;
-    margin: 0;
 }
 
-/*Styles subtopic headings with a consistent appearance. These headings are smaller to create visual hierarchy and improve organization.*/
 h2 {
-    background-color: var(--main-teal);
-    color: white;
-    letter-spacing: 0.5px;
-    font-size: 28px;
-    font-family: Arial, sans-serif;
+    margin: 0 0 15px;
     padding: 10px;
-    margin-top: 0;
-    margin-bottom: 15px;
+    background-color: var(--main-teal);
     border-bottom: 3px solid rgba(217, 111, 115, 0.6);
+    color: white;
+    font-size: 28px;
+    letter-spacing: 0.5px;
 }
 
-/* Styles smaller subsection headings, such as the quiz title, to create visual hierarchy without competing with the main page headings. */
 h3 {
-    font-size: 22px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
     color: var(--dark-teal);
+    font-size: 22px;
     font-weight: bold;
 }
 
-/*NAVIGATION
-Uses flexbox to center the navigation links and create a consistent horizontal menu
-that appears the same on every page.*/
+
+/* ============================================ NAVIGATION ================================================= */
+
+/* Styles for the navigation bar, including layout, colors, and hover effects. 
+The navigation links are styled to be visually appealing and provide clear 
+feedback when hovered or active, enhancing the user experience. */
 nav {
-    background-color: var(--soft-teal);
-    padding: 10px;
     display: flex;
     justify-content: center;
-    border: 2px solid var(--dark-teal);
     flex-wrap: wrap;
+    padding: 10px;
+    background-color: var(--soft-teal);
+    border: 2px solid var(--dark-teal);
 }
 
-/*Styles navigation links and adds hover effects to improve user interaction.*/
 nav a {
-    color: var(--dark-teal);
-    padding: 10px;
     margin: 0 5px;
-    font-weight: bold;
-    font-size: large;
+    padding: 10px;
+    color: var(--dark-teal);
     text-decoration: none;
+    font-size: large;
+    font-weight: bold;
 }
 
 nav a:hover {
@@ -116,72 +130,79 @@ nav a.active {
 }
 
 
-/*MAIN CONTENT
-Allows the main content area to expand so the layout fills the page correctly.*/
-main {
-    flex: 1;
-    padding: 20px;
-}
+/* ============================================== LINKS ==================================================== */
 
-main a{
+/* Styles for links within the main content, including colors and hover effects. 
+The main links are designed to stand out with bold text and a specific color, while the text links have an 
+underline and a softer color. Both types of links change color on hover to indicate interactivity. */
+main a {
     color: var(--dark-teal);
     font-weight: bold;
 }
 
-main a:hover{
+main a:hover {
     color: var(--main-teal);
 }
 
-.container{
+.text-link {
+    color: var(--text-dark);
+    text-decoration: underline;
+}
+
+.text-link:hover {
+    color: var(--accent-coral);
+    background-color: transparent;
+}
+
+
+/* ============================================= MAIN LAYOUT =============================================== */
+
+/* Styles for the main content layout, including container width, card styles, and section styling.
+The container centers the content and limits its maximum width for better readability. */
+
+.container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 24px;
 }
 
 .content-card {
-    background-color: white;
-    border-radius: var(--card-radius);
-    padding: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background-color: white;
+    border-top: 4px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--card-radius);
     box-shadow: var(--medium-shadow);
-    border-top: 4px solid rgba(0,0,0,0.05);
-}
-
-.content-card p {
-    line-height: 1.6;
 }
 
 .key-note {
+    margin-top: 15px;
+    padding: 10px 14px;
     background-color: var(--soft-teal);
     border-left: 4px solid var(--accent-coral);
-    padding: 10px 14px;
     border-radius: var(--small-radius);
     font-weight: 600;
-    margin-top: 15px;
 }
 
-.quick-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
+section {
+    position: relative;
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-sm);
 }
 
-.quick-links a {
-    background-color: var(--soft-teal);
-    color: var(--dark-teal);
-    padding: 10px 14px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    min-width: 180px;
-    text-align: center;
+section::after {
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
-.quick-links a:hover {
-    background-color: var(--accent-coral);
-    color: white;
-}
+
+/* ============================================ SPLIT LAYOUTS ============================================== */
+
+/* Styles for split layouts that combine text and images side by side.
+The split layout uses a grid to create two columns, with a gap between them. */
 
 .split-layout {
     display: grid;
@@ -203,67 +224,96 @@ main a:hover{
     line-height: 1.6;
 }
 
+
+/* ============================================= QUICK LINKS =============================================== */
+
+/* Styles for the quick links section, which provides easy access to important pages or sections.
+The links are styled as buttons with a consistent color scheme and hover effects to enhance usability. */
+
+.quick-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.quick-links a {
+    min-width: 180px;
+    padding: 10px 14px;
+    background-color: var(--soft-teal);
+    border-radius: 20px;
+    color: var(--dark-teal);
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.quick-links a:hover {
+    background-color: var(--accent-coral);
+    color: white;
+}
+
+
+/* =========================================== FEATURE BOXES =============================================== */
+
+/* Styles for feature boxes that highlight key features or sections of the website.
+The feature boxes are designed with a distinct background color, border, and shadow to make them stand out, 
+and they include hover effects to indicate interactivity. The grid layout allows for multiple feature 
+boxes to be displayed in a structured way. */
+
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: var(--spacing-md);
     margin-top: 15px;
 }
 
 .feature-link {
-    text-decoration: none;
-    color: inherit;
     display: block;
+    color: inherit;
+    text-decoration: none;
 }
 
 .feature-box {
-    background-color: #e6f0ee;
+    min-height: 115px;
     padding: 18px;
+    background-color: var(--soft-teal);
+    border-left: 4px solid var(--accent-coral);
     border-radius: 10px;
     box-shadow: var(--soft-shadow);
-    border-left: 4px solid var(--accent-coral);
-    min-height: 115px;
 }
 
 .feature-link:hover .feature-box {
-    box-shadow: var(--hover-shadow);
     background-color: white;
     border-left: 6px solid var(--accent-coral);
+    box-shadow: var(--hover-shadow);
 }
 
 .feature-box h3 {
     margin-top: 0;
     margin-bottom: 8px;
-    color: var(--primary-teal);
+    color: var(--main-teal);
 }
 
 .feature-box p {
     margin-bottom: 0;
-    font-weight: normal;
     line-height: 1.5;
+    font-weight: normal;
 }
 
-section {
-    margin-bottom: var(--spacing-lg);
-    padding: var(--spacing-sm);
-    position: relative;
-}
 
-section::after {
-    content: "";
-    display: block;
-    height: 1px;
-    background: rgba(0,0,0,0.05);
-    margin-top: 20px;
-}
+/* ============================================== TIMELINE ================================================= */
 
-/* TIMELINE SECTION */
+/* Styles for the timeline section, which provides a visual representation of historical events or milestones.
+The timeline includes a navigation bar with buttons that represent different time periods or events, and it 
+uses a horizontal layout with a connecting line to create a clear and engaging timeline experience. 
+The buttons have hover and active states to enhance interactivity. */
+
 .timeline-section h2 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-/* TIMELINE NAVIGATION */
 .timeline-nav {
     display: flex;
     justify-content: center;
@@ -284,31 +334,28 @@ section::after {
     z-index: 0;
 }
 
-/* Timeline buttons */
 .timeline-button {
     position: relative;
     z-index: 1;
     background-color: var(--soft-teal);
     border: none;
-    height: 50px;
+    width: 120px; 
+    height: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 14px;
     border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
-    margin: 0 5px;
 }
 
 .timeline-button span {
+    margin-bottom: 2px;
     font-size: 0.8rem;
     opacity: 0.8;
-    margin-bottom: 2px;
 }
 
-/* The dot on each button */
 .timeline-button::before {
     content: "";
     position: absolute;
@@ -320,72 +367,72 @@ section::after {
     border: 3px solid white;
     border-radius: 50%;
     box-shadow: var(--soft-shadow);
+    transform: translateX(-50%);
     z-index: 2;
 }
 
-/* Hover effect */
-.timeline-button:hover {
+.timeline-button:hover,
+.timeline-button.active {
     background-color: var(--accent-coral);
     color: white;
 }
 
 .timeline-button.active {
-    background-color: var(--accent-coral);
-    color: white;
     box-shadow: var(--hover-shadow);
 }
 
-/*ID SELECTOR
-Adds slight letter spacing to the main homepage title for emphasis.*/
-#main-title {
-    letter-spacing: 1px;
-}
 
-/*TEXT LINKS
-Creates a separate style for footer and reference links so they remain clearly visible
-and distinct from the navigation links.*/
-.text-link{
-    color: blue;
-    text-decoration: underline;
-}
+/* =============================================== IMAGES ================================================== */
 
-.text-link:hover {
-    color: darkblue;
-    background-color: transparent;
-}
+/* Styles for images within the content, including layout, borders, and captions.
+Images are designed to be responsive and visually appealing, with borders and shadows to make them stand out. 
+Captions are styled to provide context and are centered below the images. The hero image has a larger size and 
+a distinct style to make it a focal point on the page. */
 
-/*IMAGES
-Styles images to be centered, properly sized, and visually consistent*/
 img {
+    display: block;
     width: 100%;
     max-width: 500px;
     height: auto;
     margin: 10px auto 8px;
-    display: block;
     border: 1px solid var(--dark-teal);
     border-radius: var(--small-radius);
     box-shadow: var(--soft-shadow);
 }
 
 .image-caption {
+    margin-top: 4px;
+    margin-bottom: 10px;
+    color: var(--caption-gray);
     text-align: center;
     font-size: 14px;
-    margin-top: 5px;
-    margin-bottom: 25px;
-    color: var(--caption-gray);
 }
 
 .hero-image img {
-    width: 100%;
     max-width: 900px;
-    display: block;
     margin: 20px auto 8px;
     border-radius: var(--card-radius);
 }
 
-/* About page full layout */
+
+/* ============================================== ABOUT PAGE =============================================== */
+
+/* Styles specific to the about page, including layout for the profile section, image styling, and 
+information boxes. The about page features a profile section with an image and text side by side, 
+styled to be visually appealing and informative. Information boxes are used to highlight key details 
+about the subject, with a distinct design to make them stand out. */
+
 .about-page-card {
-    padding-bottom: 30px;
+    padding-bottom: var(--spacing-lg);
+}
+
+.about-profile {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    max-width: 1000px;
+    margin-bottom: 25px;
 }
 
 .about-image-box {
@@ -396,41 +443,34 @@ img {
 
 .about-image-box img {
     width: 150px;
-    height: auto; 
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    height: auto;
     border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .about-text {
     max-width: 800px;
 }
 
-.about-profile {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 25px;
-    max-width:1000px;
+.about-subtitle {
+    margin-bottom: 10px;
+    color: var(--accent-coral);
+    font-weight: 600;
 }
 
 .about-info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: var(--spacing-md);
     margin-top: 10px;
 }
 
 .info-box {
+    padding: 18px;
     background-color: var(--soft-teal);
     border-left: 5px solid var(--accent-coral);
     border-radius: 12px;
-    padding: 18px;
-}
-
-.about-page-card h2 {
-    margin-bottom: 20px;
 }
 
 .info-box h3 {
@@ -438,27 +478,32 @@ img {
     color: var(--dark-teal);
 }
 
-.about-subtitle {
-    font-weight: 600;
-    color: var(--accent-coral);
-    margin-bottom: 10px;
+.about-page-card h2 {
+    margin-bottom: var(--spacing-md);
 }
 
-/*TABLES
-Styles tables with borders and header formatting to organize information clearly.*/
+
+/* =============================================== TABLES ================================================== */
+
+/* Styles for tables within the content, including layout, borders, and header styling.
+Tables are designed to be clear and easy to read, with distinct borders and header styles to 
+differentiate between different sections of the table. The full-width layout ensures that 
+tables utilize the available space effectively. */
+
 table {
-    border: 2px solid var(--dark-teal);
-    border-collapse: collapse;
     width: 100%;
     margin-top: 15px;
     background-color: white;
+    border: 2px solid var(--dark-teal);
+    border-collapse: collapse;
     border-radius: var(--small-radius);
     overflow: hidden;
 }
 
-th, td {
-    border: 1.5px solid var(--dark-teal);
+th,
+td {
     padding: 10px;
+    border: 1.5px solid var(--dark-teal);
     text-align: left;
 }
 
@@ -468,46 +513,49 @@ th {
     font-weight: bold;
 }
 
-/*LISTS
-Adds spacing between list items to improve readability.*/
-li {
-    margin-bottom: var(--spacing-sm);
-}
 
-/* KEY TERMS SECTION */
+/* ============================================== KEY TERMS ================================================ */
+
+/* Styles for the key terms section, which highlights important concepts or terminology related to the content.
+The key terms are presented in a list format, with custom bullet points and styling to make them
+stand out. The use of strong tags allows for specific terms to be emphasized with a different color. */
 
 #key-terms ul {
-    list-style: none;
-    padding-left: 20px;
     margin-top: 10px;
+    padding-left: 20px;
+    list-style: none;
 }
 
 #key-terms li {
-    margin-bottom: 12px;
     position: relative;
+    margin-bottom: 12px;
     padding-left: 10px;
     line-height: 1.5;
 }
 
-/* Custom bullet */
 #key-terms li::before {
     content: "•";
-    color: var(--accent-coral);
     position: absolute;
     left: -10px;
+    color: var(--accent-coral);
     font-size: 1.2rem;
 }
 
-/* Style the term */
 #key-terms strong {
-    color: var(--primary-teal);
+    color: var(--main-teal);
 }
 
+
+/* ============================================== FLIP CARDS =============================================== */
+
+/* Styles for flip cards, which provide an interactive way to present information.
+Flip cards have a front and back side that flip on hover, revealing additional information. */
+
 .card-instruction {
+    margin-bottom: var(--spacing-md);
+    color: var(--dark-teal);
     text-align: center;
     font-weight: bold;
-    color: var(--dark-teal);
-    margin-bottom: var(--spacing-md);
 }
 
 .card-grid {
@@ -517,42 +565,39 @@ li {
 }
 
 .flip-card {
-    cursor: pointer;
+    display: flex;
     min-height: 140px;
     border-radius: var(--card-radius);
     overflow: hidden;
     box-shadow: var(--soft-shadow);
-    display: flex; 
+    cursor: pointer;
 }
 
 .flip-card:hover {
-    transform: translateY(-3px);
     box-shadow: var(--hover-shadow);
 }
 
 .flip-front,
 .flip-back {
-    flex: 1; 
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    flex: 1;
     padding: var(--spacing-md);
+    text-align: center;
 }
 
-/* FRONT */
 .flip-front {
     background-color: var(--dark-teal);
     color: white;
 }
 
 .flip-front h3 {
-    font-size: 26px;
     margin: 0;
-    color: white; /* force visibility */
+    color: white;
+    font-size: 26px;
 }
 
-/* BACK */
 .flip-back {
     background-color: var(--accent-coral);
     color: white;
@@ -560,71 +605,60 @@ li {
 
 .flip-back p {
     margin: 0;
-    font-size: 16px;
     color: white;
+    font-size: 16px;
 }
 
-.flip-card:hover .flip-front {
-    filter: brightness(1.1);
-}
-
+.flip-card:hover .flip-front,
 .flip-card:hover .flip-back {
     filter: brightness(1.1);
 }
 
-/* hide logic */
 .hidden {
     display: none;
 }
 
-/*FOOTER
-Styles the footer so it is consistent with the rest of the website
-and it displays the course information at the bottom of each page.*/
-footer {
-    background-color: var(--main-teal);
-    color:white;
-    text-align: center;
-    padding: 15px;
-    border-top: 2px solid var(--dark-teal);
-    font-size: 14px;
-}
 
-/*QUIZ
-Styles the quiz page*/
+/* ================================================ QUIZ =================================================== */
+
+/* Styles for the quiz section, which provides an interactive way for users to test their knowledge.
+The quiz container is styled to be visually appealing and easy to use, with input fields, buttons, 
+and result displays that are clearly defined. The use of colors and spacing helps to create a user-friendly quiz experience. */
+
 .quiz-container {
+    max-width: 800px;
     margin: 20px auto;
     padding: 24px;
     background-color: white;
     border-radius: var(--card-radius);
-    max-width: 800px;
     box-shadow: var(--medium-shadow);
 }
 
-.quiz-container input[type="text"]{
+.quiz-container input[type="text"] {
     width: 100%;
     max-width: 300px;
-    padding: 8px;
     margin-top: 8px;
+    padding: 8px;
     border: 1px solid var(--dark-teal);
-    border-radius:var(--small-radius);
+    border-radius: var(--small-radius);
 }
 
-.quiz-container label{
+.quiz-container label {
     display: inline-block;
     margin-bottom: 8px;
 }
 
-.quiz-container button{
-    margin-top:10px;
+.quiz-container button {
+    margin-top: 10px;
     padding: 10px 15px;
-    border: none;
-    border-radius:5px;
     background-color: var(--button-bg);
+    border: none;
+    border-radius: 5px;
     color: white;
     cursor: pointer;
 }
 
-.quiz-container button:hover{
+.quiz-container button:hover {
     background-color: var(--button-hover);
 }
 
@@ -634,57 +668,67 @@ Styles the quiz page*/
     padding-left: 20px;
 }
 
-.question{
-    margin-bottom:20px;
+.question {
+    margin-bottom: var(--spacing-md);
     padding: 15px;
     background-color: var(--soft-teal);
     border-left: 4px solid var(--accent-coral);
     border-radius: var(--small-radius);
 }
 
-/* RESULT FEEDBACK
-Styles the results area and uses color to clearly show general quiz feedback, including pass/fail status and validation messages. */
-#results{
-    margin-top:20px;
-    padding:15px;
-    border-radius:var(--card-radius);
+#results {
+    margin-top: var(--spacing-md);
+    padding: 15px;
     background-color: var(--soft-teal);
+    border-radius: var(--card-radius);
 }
 
-.pass{
-    color: #155724;
+.pass {
+    padding: 8px;
     background-color: #d4edda;
-    padding: 8px;
     border-radius: 5px;
+    color: #155724;
 }
 
-.fail{
-    color: #721c24;
+.fail {
+    padding: 8px;
     background-color: #f8d7da;
-    padding: 8px;
     border-radius: 5px;
+    color: #721c24;
 }
 
-/* TABLET RESPONSIVE DESIGN
-   Adjusts layout, spacing, navigation, images, and grids for medium-sized screens.
-*/
+
+/* ================================================ FOOTER ================================================= */
+
+/* Styles for the footer section, which provides information about the website or author.
+The footer is designed to be visually distinct from the main content, with a background color, border, and centered text. 
+The use of padding and font size helps to create a clear and concise footer that provides relevant information without overwhelming the user. */
+
+footer {
+    padding: 15px;
+    background-color: var(--main-teal);
+    border-top: 2px solid var(--dark-teal);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* ====================================== TABLET RESPONSIVE DESIGN ========================================= */
+
+/* Styles for tablet devices (screens 900px and below).
+This section adjusts layout, spacing, and font sizes to fit a smaller screen while still keeping
+a similar structure to the desktop version. The goal is to reduce crowding without forcing a full mobile layout. */
+
 @media (max-width: 900px) {
 
+    /* Slightly reduces overall page width and padding to better fit tablet screens */
     .container {
         max-width: 95%;
         padding: var(--spacing-md);
     }
 
-    nav {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    nav a {
-        font-size: 14px;
-        padding: 10px;
-    }
-
+    /* Reduces heading sizes to maintain readability without overwhelming the screen */
     h1 {
         font-size: 30px;
     }
@@ -693,235 +737,254 @@ Styles the results area and uses color to clearly show general quiz feedback, in
         font-size: 24px;
     }
 
+     /* Centers headings under photo on About me page for visual balance */
+    .about-text h3,
+    .about-text h4 {
+        text-align: center;
+    }
+
+    /* Navigation remains horizontal but allows wrapping if space is limited */
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Slightly reduces navigation link size for better fit */
+    nav a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Adjusts content card spacing to fit tablet layout */
     .content-card {
         padding: var(--spacing-md);
     }
 
+    /* Changes split layouts from side-by-side to vertical stacking.
+       This prevents long text from creating uneven layouts next to images. */
     .split-layout {
-        gap: var(--spacing-md);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
     }
 
-    .split-layout img {
-        max-width: 100%;
-        height: auto;
+    /* Moves images above text for better reading flow on smaller screens */
+    .split-layout .image-content {
+        order: -1;
+        margin-bottom: 10px;
     }
 
+    /* Ensures reversed layouts still place images first */
+    .split-layout.reverse .image-content {
+        order: -1;
+    }
+
+    .split-layout.reverse .text-content {
+        order: 2;
+    }
+
+    /* Keeps feature boxes and flashcards in a two-column layout on tablets.
+       This balances readability and efficient use of space. */
     .feature-grid,
     .card-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-md);
     }
 
-    .site-links {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-sm);
-    }
-
+    /* Converts timeline from horizontal layout to stacked button layout.
+       This avoids awkward wrapping and improves usability on touch devices. */
     .timeline-nav {
-        flex-wrap: wrap;
-        gap: var(--spacing-sm);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 20px 0;
     }
 
+    /* Removes decorative timeline line for cleaner layout */
+    .timeline-nav::before {
+        display: none;
+    }
+
+    /* Styles timeline items as larger clickable buttons */
+    .timeline-button {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+        min-height: 70px;
+        padding: 14px;
+        background-color: var(--soft-teal);
+        border: 1.5px solid var(--dark-teal);
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: var(--soft-shadow);
+    }
+
+    /* Removes decorative dot above timeline buttons */
+    .timeline-button::before {
+        display: none;
+    }
+
+    /* Ensures tables fit within screen and remain readable */
     table {
         width: 100%;
         font-size: 15px;
     }
 }
 
-/* RESPONSIVE DESIGN
-   Adjusts layout, spacing, font sizes, navigation, tables, cards, and grids
-   so the website remains readable and usable on smaller screens.
-*/
+
+/* ======================================= MOBILE RESPONSIVE DESIGN ======================================== */
+
+/* Styles for mobile devices (600px and below).
+This section simplifies the layout by stacking all content vertically, increasing readability,
+and making all elements easier to interact with on smaller touch screens. */
+
 @media (max-width: 600px) {
 
+    /* Keeps base font size readable on smaller screens */
+    body {
+        font-size: 16px;
+    }
+
+    /* Reduces heading sizes for mobile display */
     h1 {
-        font-size: 24px;
         padding: 15px;
+        font-size: 24px;
     }
 
     h2 {
-        font-size: 22px;
         padding: 8px;
+        font-size: 22px;
     }
 
     h3 {
         font-size: 18px;
     }
 
+    /* Ensures text is easy to read and properly spaced */
+    p,
+    li {
+        text-align: left;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Converts navigation to vertical stacked layout for easier tapping */
     nav {
         flex-direction: column;
         align-items: center;
     }
 
+    /* Expands navigation links into button-like elements */
     nav a {
         display: block;
         width: 85%;
-        text-align: center;
         margin: 6px auto;
         padding: 10px;
-        font-size: 16px;
         border-radius: 18px;
-    }
-
-    body {
+        text-align: center;
         font-size: 16px;
     }
 
-    p,
-    li {
-        font-size: 16px;
-        line-height: 1.6;
-        text-align: justify;
-    }
-
+    /* Reduces container padding for smaller screens */
     .container {
         padding: var(--spacing-sm);
     }
 
+    /* Reduces spacing between content sections */
     .content-card {
-        padding: var(--spacing-sm);
         margin-bottom: var(--spacing-md);
-    }
-
-    .split-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .feature-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .feature-box {
-        min-height: auto;
-        padding: var(--spacing-md);
-    }
-
-    .site-links {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: var(--spacing-sm);
-    }
-
-    .site-links a {
-        display: block;
-        width: 85%;
-        max-width: 300px;
-        margin: 8px auto;
-        padding: 12px;
-        text-align: center;
-        border-radius: 25px;
-    }
-
-    .quiz-container {
         padding: var(--spacing-sm);
     }
 
-    .timeline-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 18px;
-        position: relative;
-        padding: 20px 0;
-    }
-
-    .timeline-nav::before {
-        display: none;
-    }
-
-    .timeline-button {
-        position: relative;
-        z-index: 1;
-        width: 85%;
-        max-width: 240px;
-        padding: 12px;
-        border-radius: 20px;
-        text-align: center;
-        background-color: var(--soft-teal);
-        border: 1.5px solid var(--dark-teal);
-        box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-    }
-
-    /* creates the "dot" above each button */
-    .timeline-button::before {
-        content: "";
-        position: absolute;
-        top: -8px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 12px;
-        height: 12px;
-        background-color: var(--accent-coral);
-        border-radius: 50%;
-        border: 3px solid white;
-    }
-
-    .card-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .flip-card {
-        height: 130px;
-    }
-
-    .about-profile {
-        flex-direction: column;
-        align-items: center;
-        text-align: left;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    .about-info-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-text {
-        max-width: 100%;
-        text-align: justify;
-    }
-
-    .about-text h3, .about-text h4{
-        text-align: center;
-    }
-
-    table {
-        font-size: 14px;
-        display: table;
-        width: 100%;
-        white-space: normal;
-    }
-
-    /* Stack layout vertically on mobile */
+    /* Ensures all split layouts stack vertically */
     .split-layout {
         display: flex;
         flex-direction: column;
+        gap: 0px;
     }
 
-    /* Move image section to top */
+    /* Moves image to the top of the section for better flow */
     .split-layout div:last-child {
         order: -1;
         margin-bottom: 10px;
     }
 
-    /* Hide image caption on mobile */
-    .image-caption {
+    /* Converts grid layouts into single-column layout */
+    .feature-grid,
+    .card-grid,
+    .about-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Adjusts feature boxes for smaller screens */
+    .feature-box {
+        min-height: auto;
+        padding: var(--spacing-md);
+    }
+
+    /* Reduces quiz padding for mobile */
+    .quiz-container {
+        padding: var(--spacing-sm);
+    }
+
+    /* Keeps timeline buttons large but slightly smaller than tablet */
+    .timeline-button {
+        width: 90%;
+        max-width: 280px;
+    }
+
+    /* Removes timeline decorative dot */
+    .timeline-button::before {
         display: none;
     }
 
+    /* Slightly reduces flip card height */
+    .flip-card {
+        height: 130px;
+    }
+
+    /* Stacks about section vertically */
+    .about-profile {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: left;
+    }
+
+    /* Expands text to full width */
+    .about-text {
+        max-width: 100%;
+    }
+
+    /* Moves profile image above text */
+    .about-image-box {
+        order: -1;
+    }
+
+    /* Slightly increases image size */
+    .about-image-box img {
+        width: 160px;
+    }
+
+    /* Keeps tables readable and prevents overflow */
+    table {
+        display: table;
+        width: 100%;
+        white-space: normal;
+        font-size: 14px;
+    }
+
+    /* Ensures images scale properly */
     img {
         max-width: 100%;
         height: auto;
     }
 
-    .about-image-box img {
-        width: 160px;
-        
-    }
-
-    .about-image-box {
-        order: -1;
+    /* Hides captions to reduce clutter on small screens */
+    .image-caption {
+        display: none;
     }
 }
-
